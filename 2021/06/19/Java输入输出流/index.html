@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | HePing&#39;Bolg</title>
+  <title>Java-输入输出流 | HePing&#39;Bolg</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="计算机科学与技术大二学生">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HePing&#39;Bolg">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+  <meta name="description" content="Java-输入输出流 在程序运行时,可能需要输入一些原始数据，要将数据处理的结果永久的保存。Java中提供IO流技术可以是数据在不同设备之间进行传送，通过输入流，可以方便地从输入设备中获得数据，通过输出流，可以容易的将数据传送到存储设备中，接下来开始内容 File类1. 定义： File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java-输入输出流">
+<meta property="og:url" content="http://example.com/2021/06/19/Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81/index.html">
 <meta property="og:site_name" content="HePing&#39;Bolg">
-<meta property="og:description" content="计算机科学与技术大二学生">
+<meta property="og:description" content="Java-输入输出流 在程序运行时,可能需要输入一些原始数据，要将数据处理的结果永久的保存。Java中提供IO流技术可以是数据在不同设备之间进行传送，通过输入流，可以方便地从输入设备中获得数据，通过输出流，可以容易的将数据传送到存储设备中，接下来开始内容 File类1. 定义： File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-06-19T13:07:01.256Z">
+<meta property="article:modified_time" content="2021-06-19T14:36:54.550Z">
 <meta property="article:author" content="何平">
-<meta property="article:tag" content="HTML|CSS|JavaScript|jQuery">
+<meta property="article:tag" content="-Java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="HePing&#39;Bolg" type="application/atom+xml">
@@ -273,41 +275,181 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java输入输出流" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      Java-输入输出流
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2021/06/19/Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81/" class="archive-article-date">
         <time datetime="2021-06-19T13:07:01.256Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-19</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">5分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Java-输入输出流"><a href="#Java-输入输出流" class="headerlink" title="Java-输入输出流"></a>Java-输入输出流</h1><hr>
+<p>在程序运行时,可能需要输入一些原始数据，要将数据处理的结果永久的保存。<strong>Java</strong>中提供IO流技术可以是数据在不同设备之间进行传送，通过输入流，可以方便地从输入设备中获得数据，通过输出流，可以容易的将数据传送到存储设备中，接下来开始内容</p>
+<h2 id="File类"><a href="#File类" class="headerlink" title="File类"></a><strong>File类</strong></h2><h3 id="1-定义：-File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象"><a href="#1-定义：-File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象" class="headerlink" title="1. 定义： File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象"></a>1. 定义： File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象</h3><h3 id="2-文件对象与文件属性如下所示："><a href="#2-文件对象与文件属性如下所示：" class="headerlink" title="2. 文件对象与文件属性如下所示："></a>2. 文件对象与文件属性如下所示：</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th align="right">方法名</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>String</td>
+<td align="right">Fiel(String filename)</td>
+<td align="center">在当前路径下，创建filename文件</td>
+</tr>
+<tr>
+<td>long</td>
+<td align="right">length()</td>
+<td align="center">获取文件的长度大小</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td align="right">exists()</td>
+<td align="center">判断文件（目录）是否存在</td>
+</tr>
+<tr>
+<td>String</td>
+<td align="right">getPath()</td>
+<td align="center">获取路径名字符串</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td align="right">isFile()</td>
+<td align="center">判断文件是否是一个标准文件</td>
+</tr>
+</tbody></table>
+<h3 id="3-文件的操作："><a href="#3-文件的操作：" class="headerlink" title="3. 文件的操作："></a>3. 文件的操作：</h3><p>对文件的操作主要有磁盘上创建文件、删除文件、运行可执行文件等，Java中相应的操作如下：</p>
+<blockquote>
+<ul>
+<li>创建文件<br>File 类的而方法：  public boolean createNewFile()<br>***——-&gt;***例如，在D盘下创建一个hello.txt文件<br>  ***——-&gt;***创建语句： File file=new File(“D:\“,”hello.txt”);<br>  ***——-&gt;***调用语句： File.createNewFile(); 完成创建</li>
+<li>删除文件<br>File 类的方法：public boolean delete() 可以将当前对象表示的文件删除<br><em><strong>——-&gt;</strong></em> 如上面的hello.txt文件可以用： file.delete() 删除</li>
+<li>运行可执行文件<br>想要完成运行可执行（.exe）文件必须有 import.java.IO.*, 以及 import java.io.File语句，需要用java.lang.Runtime类</li>
+<li><strong>——-&gt;</strong>* 先创建Runtime对象 ： Runtime ec=Runtime.getRuntime()<br>***——-&gt;***在用ec调用： Process exec(String command), command 为指定的系统命令（javac\java命令）</li>
+</ul>
+</blockquote>
+<p>  如调用记事本的命令，打开一个新记事本的程序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">R1</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			Runtime ec=Runtime.getRuntime();</span><br><span class="line">			File file=<span class="keyword">new</span> File(<span class="string">&quot;F:\\&quot;</span>,<span class="string">&quot;MarkdownPad2.exe&quot;</span>);</span><br><span class="line">			ec.exec(file.getAbsolutePath());</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span>(Exception e) &#123;&#125; </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>附加：通过java Runtime.getRuntime().exec调用外部windows程序</strong></p>
+<h3 id="1-执行多条cmd"><a href="#1-执行多条cmd" class="headerlink" title="1. 执行多条cmd"></a>1. 执行多条cmd</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">       String[] cmd = new String[3];</span><br><span class="line">       cmd[0] = &quot;cmd.exe&quot; ;  // 调用外部程序</span><br><span class="line">       cmd[1] = &quot;/C&quot; ;       // 外部程序参数， 是执行完命令后关闭命令窗口。 /K是不关闭窗口，这里导致进程不结束，java主线程挂起</span><br><span class="line">       cmd[2] = &quot;cd /d  D:\\jarDecompile\\test &amp; mkdir bbb&quot;;  //cmd调用的命令</span><br><span class="line">       Runtime rt = Runtime.getRuntime();</span><br><span class="line">       </span><br><span class="line">       System.out.println(&quot;Execing &quot; + cmd[0] + &quot; &quot; + cmd[1] </span><br><span class="line">                + &quot; &quot; + cmd[2]);</span><br><span class="line">       Process proc = rt.exec(cmd);</span><br><span class="line">       </span><br><span class="line">       int exitVal = proc.waitFor();</span><br><span class="line">       System.out.println(&quot;ExitValue: &quot; + exitVal);        </span><br><span class="line">        </span><br><span class="line">   &#125;catch (Throwable t) &#123;</span><br><span class="line">       t.printStackTrace();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-打开word文档"><a href="#2-打开word文档" class="headerlink" title="2. 打开word文档"></a>2. 打开word文档</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">        String[] cmd = new String[3];</span><br><span class="line">        cmd[0] = &quot;cmd.exe&quot; ;</span><br><span class="line">        cmd[1] = &quot;/C&quot; ;</span><br><span class="line">        cmd[2] = &quot;C:\\Users\\zhang\\Desktop\\a.doc&quot; ;</span><br><span class="line">        </span><br><span class="line">        Runtime rt = Runtime.getRuntime();</span><br><span class="line">        </span><br><span class="line">        System.out.println(&quot;Execing &quot; + cmd[0] + &quot; &quot; + cmd[1] </span><br><span class="line">                 + &quot; &quot; + cmd[2]);</span><br><span class="line">        Process proc = rt.exec(cmd);</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        int exitVal = proc.waitFor();   // 阻塞</span><br><span class="line">        System.out.println(&quot;ExitValue: &quot; + exitVal);    //当文档关闭后，主线程才继续执行     </span><br><span class="line">         </span><br><span class="line">    &#125;catch (Throwable t) &#123;</span><br><span class="line">        t.printStackTrace();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-用chrome打开网页"><a href="#3-用chrome打开网页" class="headerlink" title="3. 用chrome打开网页"></a>3. 用chrome打开网页</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">        String[] cmd = new String[2];</span><br><span class="line">        cmd[0] = &quot;C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe&quot; ;</span><br><span class="line">        </span><br><span class="line">//	    cmd[1] = &quot;C:\\Users\\zhang\\Desktop\\a.html&quot; ; // 打开本地静态html文件</span><br><span class="line"></span><br><span class="line">        cmd[1] = &quot;https://blog.csdn.net/kiramario/article/details/110820129&quot; ;</span><br><span class="line">        Runtime rt = Runtime.getRuntime();</span><br><span class="line">        </span><br><span class="line">        System.out.println(&quot;Execing &quot; + cmd[0] + &quot; &quot; + cmd[1]);</span><br><span class="line">        Process proc = rt.exec(cmd);</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        int exitVal = proc.waitFor();</span><br><span class="line">        System.out.println(&quot;ExitValue: &quot; + exitVal);        </span><br><span class="line">         </span><br><span class="line">    &#125;catch (Throwable t) &#123;</span><br><span class="line">        t.printStackTrace();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Scanner-类与文件-："><a href="#4-Scanner-类与文件-：" class="headerlink" title="4. Scanner 类与文件 ："></a>4. Scanner 类与文件 ：</h3><blockquote>
+<ul>
+<li>利用Scanner 类对象还可以从文件中读取数据。如果从文件中读取数据，则应采用下面的形式实例化一个Scanner 类的对象 ： Scanner input=new Scanner(文件类对象）；</li>
+<li><strong>——-&gt;</strong>* 读数据时默认以空格作为数据的分隔标记</li>
+</ul>
+</blockquote>
+<p>Java之Scanner类与文件例子<br>例子： 如有一个购物清单： 电视机 3200.0元，笔记本4200.00元，午餐120.33元，统计该次购物共花费多少，该购物清单文件放在 recond.txt中<br>问题分析： 由于购物清单在一个文件中，所有应定义一个文件对象，用该文件对象在创建Scanner 类的对象，再用Scanner类的对象调用方法读取数据，程序如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line">import java.util.*;</span><br><span class="line">public class Example </span><br><span class="line">&#123;</span><br><span class="line">      public static void main(String[] args) </span><br><span class="line">    &#123;</span><br><span class="line">         File file =new File(&quot;recond.txt&quot;);</span><br><span class="line">         Scanner reader=null;</span><br><span class="line">         double price,total=0;</span><br><span class="line">         try </span><br><span class="line">         &#123;</span><br><span class="line">            reader=new Scanner(file);</span><br><span class="line">            reader.useDelimiter(&quot;[^0-9.]+&quot;); //数据分隔符</span><br><span class="line">            while(reader.hasNextDouble()) </span><br><span class="line">            &#123;</span><br><span class="line">               price=reader.nextDouble();</span><br><span class="line">               total=total+price;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(&quot;总花费: &quot;+total+&quot;元&quot;)；</span><br><span class="line">         &#125;</span><br><span class="line">        catch(Exception e) &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/Mzhifubao.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/Mwechat.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/06/19/Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81/" target="_blank">Java-输入输出流</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
-
-        <div class="article-info info-on-right">
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          何平
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2021/06/19/Java输入输出流/" title="Java-输入输出流" target="_blank">http://example.com/2021/06/19/Java输入输出流/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -319,191 +461,107 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/19/Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/06/17/javascript/" class="archive-article-date">
-        <time datetime="2021-06-17T04:56:02.633Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/17/javascript/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript圣诞节</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/06/17/javascript/" target="_blank">javascript圣诞节</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/06/17/Demo/" class="archive-article-date">
-        <time datetime="2021-06-17T04:41:34.254Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/06/17/Demo/" target="_blank">javascript中的地方</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/06/17/test/" class="archive-article-date">
-        <time datetime="2021-06-17T03:17:41.143Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/06/17/test/" target="_blank">Title alter</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/06/17/hello-world/" class="archive-article-date">
-        <time datetime="2021-06-17T01:29:27.615Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/06/17/hello-world/" target="_blank">Hello World</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
 
 
           </div>
@@ -544,8 +602,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
