@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Java-输入输出流 在程序运行时,可能需要输入一些原始数据，要将数据处理的结果永久的保存。Java中提供IO流技术可以是数据在不同设备之间进行传送，通过输入流，可以方便地从输入设备中获得数据，通过输出流，可以容易的将数据传送到存储设备中，接下来开始内容 File类1. 定义： File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也">
+  <meta name="description" content="在程序运行时,可能需要输入一些原始数据，要将数据处理的结果永久的保存。Java中提供IO流技术可以是数据在不同设备之间进行传送，通过输入流，可以方便地从输入设备中获得数据，通过输出流，可以容易的将数据传送到存储设备中，接下来开始内容 File类1. 定义： File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java-输入输出流">
 <meta property="og:url" content="http://example.com/2021/06/19/Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81/index.html">
 <meta property="og:site_name" content="HePing&#39;Bolg">
-<meta property="og:description" content="Java-输入输出流 在程序运行时,可能需要输入一些原始数据，要将数据处理的结果永久的保存。Java中提供IO流技术可以是数据在不同设备之间进行传送，通过输入流，可以方便地从输入设备中获得数据，通过输出流，可以容易的将数据传送到存储设备中，接下来开始内容 File类1. 定义： File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也">
+<meta property="og:description" content="在程序运行时,可能需要输入一些原始数据，要将数据处理的结果永久的保存。Java中提供IO流技术可以是数据在不同设备之间进行传送，通过输入流，可以方便地从输入设备中获得数据，通过输出流，可以容易的将数据传送到存储设备中，接下来开始内容 File类1. 定义： File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象2">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-19T13:07:01.256Z">
-<meta property="article:modified_time" content="2021-06-19T15:05:11.882Z">
+<meta property="article:modified_time" content="2021-06-21T11:42:43.942Z">
 <meta property="article:author" content="何平">
 <meta property="article:tag" content="-Java">
 <meta name="twitter:card" content="summary">
@@ -97,7 +97,7 @@
 			
 				<li><a href="/" target="_blank">主页</a></li>
 			
-				<li><a href="https://zhousiwei.gitee.io/ibooks/" target="_blank">技术笔记</a></li>
+				<li><a href="/" target="_blank">技术笔记</a></li>
 			
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">随笔</a></li>
 			
@@ -251,7 +251,7 @@
 				
 					<li style="width: 16.666666666666668%"><a href="/">主页</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a target="_blank" rel="noopener" href="https://zhousiwei.gitee.io/ibooks/">技术笔记</a></li>
+					<li style="width: 16.666666666666668%"><a href="/">技术笔记</a></li>
 		        
 					<li style="width: 16.666666666666668%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
@@ -328,7 +328,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="Java-输入输出流"><a href="#Java-输入输出流" class="headerlink" title="Java-输入输出流"></a>Java-输入输出流</h1><hr>
+    <hr>
 <p>在程序运行时,可能需要输入一些原始数据，要将数据处理的结果永久的保存。<strong>Java</strong>中提供IO流技术可以是数据在不同设备之间进行传送，通过输入流，可以方便地从输入设备中获得数据，通过输出流，可以容易的将数据传送到存储设备中，接下来开始内容</p>
 <h2 id="File类"><a href="#File类" class="headerlink" title="File类"></a><strong>File类</strong></h2><h3 id="1-定义：-File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象"><a href="#1-定义：-File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象" class="headerlink" title="1. 定义： File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象"></a>1. 定义： File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象</h3><h3 id="2-文件对象与文件属性如下所示："><a href="#2-文件对象与文件属性如下所示：" class="headerlink" title="2. 文件对象与文件属性如下所示："></a>2. 文件对象与文件属性如下所示：</h3><table>
 <thead>
@@ -536,11 +536,6 @@
     </a>
   
   
-    <a href="/2021/06/17/javascript/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">javascript圣诞节</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
 </nav>
 
 
@@ -718,14 +713,6 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">-JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">-算法</a>
-              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">-Java</a>

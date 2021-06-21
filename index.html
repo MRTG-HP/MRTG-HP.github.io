@@ -99,7 +99,7 @@
 			
 				<li><a href="/" target="_blank">主页</a></li>
 			
-				<li><a href="https://zhousiwei.gitee.io/ibooks/" target="_blank">技术笔记</a></li>
+				<li><a href="/" target="_blank">技术笔记</a></li>
 			
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">随笔</a></li>
 			
@@ -253,7 +253,7 @@
 				
 					<li style="width: 16.666666666666668%"><a href="/">主页</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a target="_blank" rel="noopener" href="https://zhousiwei.gitee.io/ibooks/">技术笔记</a></li>
+					<li style="width: 16.666666666666668%"><a href="/">技术笔记</a></li>
 		        
 					<li style="width: 16.666666666666668%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
@@ -309,7 +309,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="Java-图形用户界面"><a href="#Java-图形用户界面" class="headerlink" title="Java-图形用户界面"></a>Java-图形用户界面</h1><hr>
+    <hr>
 <p>图形用户界面设计是程序设计的重要组成部分，界面设计的功能性、简洁性、方便性、友好性是衡量一个应用程序实现人机交互能力的重要指标。<strong>Java</strong> 语言提供了丰富的组件来完成界面设计，并通过事件机制实现功能处理，接下来开始本文的主要内容</p>
 <h2 id="抽象窗口工具集AWT"><a href="#抽象窗口工具集AWT" class="headerlink" title="抽象窗口工具集AWT"></a><strong>抽象窗口工具集AWT</strong></h2><h3 id="1-定义：-图形用户界面是实现人机交互的窗口，用户使用图形界面可以非常方便的进行操作和数据处理"><a href="#1-定义：-图形用户界面是实现人机交互的窗口，用户使用图形界面可以非常方便的进行操作和数据处理" class="headerlink" title="1. 定义： 图形用户界面是实现人机交互的窗口，用户使用图形界面可以非常方便的进行操作和数据处理"></a>1. 定义： 图形用户界面是实现人机交互的窗口，用户使用图形界面可以非常方便的进行操作和数据处理</h3><h3 id="2-AWT主要由以下4个部分组成："><a href="#2-AWT主要由以下4个部分组成：" class="headerlink" title="2. AWT主要由以下4个部分组成："></a>2. AWT主要由以下4个部分组成：</h3><blockquote>
 <ul>
@@ -369,29 +369,34 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.swing.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span></span></span><br><span class="line"><span class="function">	 </span>&#123;</span><br><span class="line">		 <span class="comment">//直接生成一个MyFrame类的对象</span></span><br><span class="line">		 <span class="keyword">new</span> MyFrame(<span class="string">&quot;一个简单窗口&quot;</span>,<span class="number">200</span>,<span class="number">200</span>,<span class="number">300</span>,<span class="number">200</span>);</span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyFrame</span> <span class="keyword">extends</span> <span class="title">JFrame</span> //一般都是用这种继承<span class="title">JFrame</span>的 方法来写的</span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	MyFrame(String title,<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> width,<span class="keyword">int</span> height)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">super</span>(title); <span class="comment">//调用父类的构造方法设置窗口标题</span></span><br><span class="line">		setLocation(x,y);</span><br><span class="line">		setSize(width,height);</span><br><span class="line">		setResizable(<span class="keyword">true</span>);<span class="comment">//设置可以改变窗口的大小</span></span><br><span class="line">		setVisible(<span class="keyword">true</span>);<span class="comment">//设置窗口可见</span></span><br><span class="line">		setDefaultCloseOperation(EXIT_ON_CLOSE);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="常用组件与布局"><a href="#常用组件与布局" class="headerlink" title="常用组件与布局"></a><strong>常用组件与布局</strong></h3><h3 id="1-JButton-按钮类"><a href="#1-JButton-按钮类" class="headerlink" title="1. JButton 按钮类"></a>1. JButton 按钮类</h3><blockquote>
 <ul>
-<li><strong>JButton类</strong><br>用于创建普通按钮，常用的构造方法为： <pre><code>        public JButton(String text）用于创建一个带有文本的按钮
-        public JButton(String text,Icon icon) 用于创建一个带初始文本和图形的按钮
-</code></pre>
-</li>
+<li><strong>JButton类</strong><br>用于创建普通按钮，常用的构造方法为： </li>
 </ul>
 </blockquote>
+<p>public JButton(String text）用于创建一个带有文本的按钮<br>public JButton(String text,Icon icon) 用于创建一个带初始文本和图形的按钮</p>
 <blockquote>
 <ul>
-<li><strong>JRadioButton单选按钮和 ButtonGroup按钮作用域类(同一个域中只能有一个单选按钮处于选中状态)</strong><pre><code>   public JRadioButton(String text) 用于创建一个带初始文本的状态为未选择的单选按钮
-   public JRadioButton(String text,boolan selected) 用于创建一个带初始文本和选择状态的单选按钮，选择状态为两种（选中和未被选中）
-   **ButtonGroup按钮作用域类的构造方法**： 
-   public ButtonGroup(),创建作用域后，调用add(AbstractButton b)方法将单选按钮加入到指定的作用域中
-</code></pre>
-</li>
-<li><strong>JCheckBox 复选框</strong> <pre><code>  JCheckBox(String text) 用于创建一个带初始文本未被选择的复选框
-  JCheckBox(String text,boolean selected) 创建一个带有初始文本的复选框，并且指定是否为被选中的状态，true 为被选中，false未被选中
-</code></pre>
-</li>
-<li><strong>JLabel标签</strong><br><strong>JLabel</strong> 类用于创建显示短文本字符串或图像的标签，常用构造方法为：<br> JLabel() 用于创建无文本的标签<br> JLabel(String text) 用于创建具有指定文本的标签<br> JLabel(String text,Icon icon,int horizontalAlignment) 用于创建具有指定文本、图像和水平对齐的标签</li>
-<li><strong>JTextField文本框</strong> </li>
-<li><em>JTextField<strong>类用于创建编辑单行字符串的文本框，常用构造方法为：<br>  JTextField(String text) 用于创建一个带初始化文本的文本框<br>  JTextField(String text,int columns) 用于创建一个带初始化文本，并指定显示宽度的文本框<br>  <strong>JTextArea文本区</strong> 构造方法和</strong>JTextField*</em> 类似<br>  <strong>JPasswordField密码框</strong> 和<strong>JTextField</strong> 类相同，不同在<strong>JPasswordField密码框</strong>初始化的文本内容以”*”代替</li>
+<li><strong>JRadioButton单选按钮和 ButtonGroup按钮作用域类(同一个域中只能有一个单选按钮处于选中状态)</strong></li>
 </ul>
 </blockquote>
+<p>public JRadioButton(String text) 用于创建一个带初始文本的状态为未选择的单选按钮<br>public JRadioButton(String text,boolan selected) 用于创建一个带初始文本和选择状态的单选按钮，选择状态为两种（选中和未被选中）<br>         <strong>ButtonGroup按钮作用域类的构造方法</strong>：<br>         public ButtonGroup(),创建作用域后，调用add(AbstractButton b)方法将单选按钮加入到指定的作用域中</p>
+<blockquote>
+<ul>
+<li><strong>JCheckBox 复选框</strong> </li>
+</ul>
+</blockquote>
+<p>JCheckBox(String text) 用于创建一个带初始文本未被选择的复选框<br>JCheckBox(String text,boolean selected) 创建一个带有初始文本的复选框，并且指定是否为被选中的状态，true 为被选中，false未被选中</p>
+<blockquote>
+<ul>
+<li><strong>JLabel标签</strong><br><strong>JLabel</strong> 类用于创建显示短文本字符串或图像的标签，常用构造方法为：</li>
+</ul>
+</blockquote>
+<p>   JLabel() 用于创建无文本的标签<br>   JLabel(String text) 用于创建具有指定文本的标签<br>   JLabel(String text,Icon icon,int horizontalAlignment) 用于创建具有指定文本、图像和水平对齐的标签</p>
+<blockquote>
+<ul>
+<li><strong>JTextField文本框</strong><br>   <strong>JTextField</strong> 类用于创建编辑单行字符串的文本框，常用构造方法为：</li>
+</ul>
+</blockquote>
+<p>   JTextField(String text) 用于创建一个带初始化文本的文本框<br>   JTextField(String text,int columns) 用于创建一个带初始化文本，并指定显示宽度的文本框<br>   <strong>JTextArea文本区</strong> 构造方法和<strong>JTextField</strong> 类似<br>   <strong>JPasswordField密码框</strong> 和<strong>JTextField</strong> 类相同，不同在<strong>JPasswordField密码框</strong>初始化的文本内容以”*”代替</p>
 <p>常用组件的使用，例子代码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.awt.FlowLayout;</span><br><span class="line"><span class="keyword">import</span> javax.swing.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example_01</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">new</span> JComponent_UI();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">JComponent_UI</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	JTextField text;</span><br><span class="line">	JButton button;</span><br><span class="line">	JCheckBox checkBox1,checkBox2,checkBox3,checkBox4;</span><br><span class="line">	JRadioButton radio1,radio2;</span><br><span class="line">	ButtonGroup group;</span><br><span class="line">	JComboBox comBox;</span><br><span class="line">	JTextArea area;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">JComponent_UI</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		init();</span><br><span class="line">		setSize(<span class="number">300</span>,<span class="number">300</span>); <span class="comment">//设置窗口大小</span></span><br><span class="line">		setVisible(<span class="keyword">true</span>);<span class="comment">//设置窗口可见</span></span><br><span class="line">		setDefaultCloseOperation(EXIT_ON_CLOSE); <span class="comment">//设置关闭窗口操作</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		setLayout(<span class="keyword">new</span> FlowLayout());<span class="comment">//设置窗口布局为流式布局</span></span><br><span class="line">		add(<span class="keyword">new</span> JLabel(<span class="string">&quot;姓名:&quot;</span>)); <span class="comment">//加入 姓名标签</span></span><br><span class="line">		text=<span class="keyword">new</span> JTextField(<span class="number">10</span>);</span><br><span class="line">		add(text);  <span class="comment">//加入文本框</span></span><br><span class="line">		add(<span class="keyword">new</span> JLabel(<span class="string">&quot;性别:&quot;</span>));</span><br><span class="line">		group=<span class="keyword">new</span> ButtonGroup();   <span class="comment">//ButtonGroup 为按钮作用域类</span></span><br><span class="line">		radio1=<span class="keyword">new</span> JRadioButton(<span class="string">&quot;男&quot;</span>);</span><br><span class="line">		radio2=<span class="keyword">new</span> JRadioButton(<span class="string">&quot;女&quot;</span>);</span><br><span class="line">		group.add(radio1); <span class="comment">//将单选按钮加入作用域</span></span><br><span class="line">		group.add(radio2);</span><br><span class="line">		add(radio1);<span class="comment">//向窗口加入单选按钮</span></span><br><span class="line">		add(radio2);</span><br><span class="line">		add(<span class="keyword">new</span> JLabel(<span class="string">&quot;初始密码: &quot;</span>));</span><br><span class="line">		add(<span class="keyword">new</span> JPasswordField(<span class="number">10</span>));</span><br><span class="line">		</span><br><span class="line">		add(<span class="keyword">new</span> JLabel(<span class="string">&quot;爱好:&quot;</span>));</span><br><span class="line">		checkBox1=<span class="keyword">new</span> JCheckBox(<span class="string">&quot;喜欢徒步&quot;</span>);<span class="comment">//创建复选框</span></span><br><span class="line">		checkBox2=<span class="keyword">new</span> JCheckBox(<span class="string">&quot;喜欢旅游&quot;</span>);</span><br><span class="line">		checkBox3=<span class="keyword">new</span> JCheckBox(<span class="string">&quot;喜欢读书&quot;</span>);</span><br><span class="line">		checkBox4=<span class="keyword">new</span> JCheckBox(<span class="string">&quot;喜欢音乐&quot;</span>);</span><br><span class="line">		add(checkBox1); <span class="comment">//向窗口中加入复选框</span></span><br><span class="line">		add(checkBox2);</span><br><span class="line">		add(checkBox3);</span><br><span class="line">		add(checkBox4);</span><br><span class="line">		add(<span class="keyword">new</span> JLabel(<span class="string">&quot;栏目列表:&quot;</span>));</span><br><span class="line">		comBox=<span class="keyword">new</span> JComboBox(); <span class="comment">//创建下拉列表</span></span><br><span class="line">		comBox.addItem(<span class="string">&quot;程序设计&quot;</span>);</span><br><span class="line">		comBox.addItem(<span class="string">&quot;数据结构&quot;</span>);</span><br><span class="line">		comBox.addItem(<span class="string">&quot;人工智能&quot;</span>);</span><br><span class="line">		add(comBox); <span class="comment">//向窗口中加入下拉列表</span></span><br><span class="line">		add(<span class="keyword">new</span> JLabel(<span class="string">&quot;自我介绍：&quot;</span>));</span><br><span class="line">		area=<span class="keyword">new</span> JTextArea(<span class="number">6</span>,<span class="number">12</span>);<span class="comment">// 创建文本区</span></span><br><span class="line">		add(<span class="keyword">new</span> JScrollPane(area)); <span class="comment">//向窗口中加入带滚动条的文本区</span></span><br><span class="line">		button=<span class="keyword">new</span> JButton(<span class="string">&quot;提交&quot;</span>);</span><br><span class="line">		add(button);<span class="comment">//向窗口中加入按钮</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -532,7 +537,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="Java-输入输出流"><a href="#Java-输入输出流" class="headerlink" title="Java-输入输出流"></a>Java-输入输出流</h1><hr>
+    <hr>
 <p>在程序运行时,可能需要输入一些原始数据，要将数据处理的结果永久的保存。<strong>Java</strong>中提供IO流技术可以是数据在不同设备之间进行传送，通过输入流，可以方便地从输入设备中获得数据，通过输出流，可以容易的将数据传送到存储设备中，接下来开始内容</p>
 <h2 id="File类"><a href="#File类" class="headerlink" title="File类"></a><strong>File类</strong></h2><h3 id="1-定义：-File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象"><a href="#1-定义：-File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象" class="headerlink" title="1. 定义： File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象"></a>1. 定义： File类对象被用来表示文件的一些基本信息，如文件名称、文件路径、文件大小等，他不会对文件进行读写操作。目录（文件夹）也是File类的对象</h3><h3 id="2-文件对象与文件属性如下所示："><a href="#2-文件对象与文件属性如下所示：" class="headerlink" title="2. 文件对象与文件属性如下所示："></a>2. 文件对象与文件属性如下所示：</h3><table>
 <thead>
@@ -618,394 +623,6 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2021/06/19/Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-javascript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/06/17/javascript/" target="_blank">javascript圣诞节</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/06/17/javascript/" class="archive-article-date">
-        <time datetime="2021-06-17T04:56:02.633Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;My New Post&quot;</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/06/17/javascript/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Demo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/06/17/Demo/" target="_blank">javascript中的地方</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/06/17/Demo/" class="archive-article-date">
-        <time datetime="2021-06-17T04:41:34.254Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;My New Post&quot;</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/06/17/Demo/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/06/17/test/" target="_blank">Title alter</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/06/17/test/" class="archive-article-date">
-        <time datetime="2021-06-17T03:17:41.143Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/06/17/test/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/06/17/hello-world/" target="_blank">Hello World</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/06/17/hello-world/" class="archive-article-date">
-        <time datetime="2021-06-17T01:29:27.615Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/06/17/hello-world/">展开全文 >></a>
     </p>
     
 
@@ -1183,14 +800,6 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">-JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">-算法</a>
-              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">-Java</a>
